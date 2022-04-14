@@ -13,6 +13,7 @@ export function increment() {
 }
 
 export function async_increment() {
+
     return function (dispatch) {
         setTimeout(() => dispatch({type: INCREMENT}),1000)
     }

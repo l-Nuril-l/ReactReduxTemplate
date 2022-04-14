@@ -1,0 +1,122 @@
+header{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+header div:first-child {
+    margin-right: auto;
+    font-family: 'Permanent Marker';
+}
+
+/* latin */
+@font-face {
+    font-family: 'Permanent Marker';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/permanentmarker/v10/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Cfw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.logo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.logo>img {
+    max-width: 100px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loader {
+    position: absolute;
+    top:50%;
+    left:50%;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ border: white dashed 5px;
+}
+
+.loader-enter-active {
+    animation: show-loader 0.5s linear infinite;
+}
+
+.loader-enter-done {
+    animation: rotating 1s linear infinite;
+}
+
+.loader-exit-active {
+    animation: show-loader 0.5s linear infinite reverse;
+}
+
+.loader-exited {
+    opacity: 0;
+}
+
+@keyframes rotating {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes show-loader {
+    0%{
+        opacity: 0;
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+
+.card-section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.card-section > div{
+    
+    width: calc((100% - 2rem) / 2); 
+}
+
+.card-section img{
+    width: 100%;
+}
+
+
+.header-section{
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.header-section img{
+    width: 100%;
+}
+
+
+header h5{
+    padding-bottom: 5px;
+    border-bottom: 3px solid black;
+}
+
+header h5:hover{
+    border-bottom: 3px solid rgb(100, 100, 100);
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+}
